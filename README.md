@@ -9,7 +9,7 @@
       * [Create Jenkins credentials (PAT)](#create-jenkins-credentials-pat)
       * [Create Jenkins credentials (Webhook shared secret)](#create-jenkins-credentials-webhook-shared-secret)
       * [Configure GitHub Server](#configure-github-server)
-    * [Step 3: Configure the Global Library](#step-3-configure-the-global-library)/
+    * [Step 3: Configure the Global Library](#step-3-configure-the-global-library)
 
 ## Setup Personal Access Token (PAT)
 
@@ -129,3 +129,11 @@ Scroll down to `Global Pipeline Libraries` and click "Add"
   * Discover pull requests from origin: Merging the pull request with the current target branch revision
 
 ![global-library-settings-2](images/global-library-settings-2.jpg)
+
+* **Underneath Behaviours**
+  * Click the "Add" button and select `Advanced sub-modules behaviours`
+  ![global-library-settings-2](images/global-library-submodule-1.jpg)
+  * Select `Recursively update submodules`
+  ![global-library-settings-2](images/global-library-submodule-2.jpg)
+  
+Scroll down to the bottom of the screen and click `Save` to save the settings.
