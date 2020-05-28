@@ -36,7 +36,7 @@ In order to facilitate automatic scans of GitHub repositories, Jenkins has the j
 ### Scan Organization Triggers
 
 * Periodically if not otherwise run: `checked`
-* Interval: `4 hours`
+* Interval: `1 hour`
 
 ### Orphaned Item Strategy
 

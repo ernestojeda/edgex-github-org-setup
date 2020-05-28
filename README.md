@@ -108,8 +108,6 @@ Navigate to the Jenkins master configure page and configure the **Global Pipelin
 
 Scroll down to `Global Pipeline Libraries` and click "Add"
 
-![global-library-settings-1](images/global-library-settings-1.jpg)
-
 **Enter the following details**:
 
 * Name: edgex-global-pipelines
@@ -119,21 +117,22 @@ Scroll down to `Global Pipeline Libraries` and click "Add"
 * **Uncheck** Include @Library changes in job recent changes
 * Retrieval Method: Modern SCM
 
-* **Source Code Management**:
-  * Select GitHub
-  * Credentials: Select or Add new "Username with Password" credential with the Personal Access Token from [Step 1](#step-1-create-personal-access-token)
-  * Repository HTTPS URL: <https://github.com/edgexfoundry/edgex-global-pipelines.git>
+![global-library-settings-1](images/global-library-settings-1.jpg)
 
-* **Behaviors**:
-  * Discover branches: Exclude branches that are also filed as PRs
-  * Discover pull requests from origin: Merging the pull request with the current target branch revision
+* **Source Code Management**:
+  * Select **Git**
+  * Project Repository: `git@github.com:edgexfoundry/edgex-global-pipelines.git`
+  * Credentials: `Select the appropriate SSH credentials`
 
 ![global-library-settings-2](images/global-library-settings-2.jpg)
 
 * **Underneath Behaviours**
+  * Click the "Add" button and select `Discover tags`
   * Click the "Add" button and select `Advanced sub-modules behaviours`
-  ![global-library-settings-2](images/global-library-submodule-1.jpg)
   * Select `Recursively update submodules`
-  ![global-library-settings-2](images/global-library-submodule-2.jpg)
+  * Click the "Add" button and select `Specify ref specs`
+    * Enter `+refs/pull/*:refs/remotes/@{remote}/pr/*`
+
+![global-library-settings-2](images/global-library-settings-3.jpg)
   
 Scroll down to the bottom of the screen and click `Save` to save the settings.
